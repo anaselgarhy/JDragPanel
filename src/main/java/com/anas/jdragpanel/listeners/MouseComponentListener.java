@@ -33,12 +33,11 @@ public class MouseComponentListener implements MouseListener, MouseMotionListene
 
     @Override
     public void mouseReleased(MouseEvent e) {
-        dragPanel.removeSelectedComponent((JComponent) e.getSource());
+
     }
 
     @Override
     public void mouseEntered(MouseEvent e) {
-
     }
 
     @Override

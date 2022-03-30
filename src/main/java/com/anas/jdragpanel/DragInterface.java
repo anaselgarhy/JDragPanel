@@ -14,8 +14,13 @@ public interface DragInterface {
     void setDragEnabled(boolean enabled);
     boolean isDragEnabled();
 
+    void setMultiSelect(boolean multiSelect);
+    boolean isMultiSelect();
+
     void setDragCursor(Cursor cursor);
     Cursor getDragCursor();
+
+    void setSelectionRectangle(SelectionRectangle rectangle);
 
     void setSelectedBorder(Border border);
     Border getSelectedBorder();
@@ -25,6 +30,9 @@ public interface DragInterface {
 
     void addSelectedComponent(JComponent component);
     void removeSelectedComponent(JComponent component);
+    void removeSelectedComponents();
+
+    void setSelectedPopupMenu(JPopupMenu menu);
 
     void setDragManager(DragManager manager);
     DragManager getDragManager();
@@ -35,4 +43,6 @@ public interface DragInterface {
     void add(JComponent component);
     void remove(JComponent component);
     void removeAll();
+
+    void drawSelectionRectangle(Point startSelectionPoint, Point currentPoint);
 }

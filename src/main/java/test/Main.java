@@ -15,7 +15,6 @@ public class Main extends JFrame {
 
         DragPanel dragPanel = new DragPanel();
 
-        dragPanel.setLayout(null);
 
         JButton button = new JButton("Button");
         JButton button2 = new JButton("Button2");
@@ -26,6 +25,12 @@ public class Main extends JFrame {
         dragPanel.add(button2);
 
         dragPanel.setBounds(0, 0, 500, 500);
+
+        JPopupMenu popupMenu = new JPopupMenu();
+        JMenuItem menuItem = new JMenuItem("Menu Item");
+        popupMenu.add(menuItem);
+
+        dragPanel.setComponentPopupMenu(popupMenu);
 
         add(dragPanel);
 
