@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.anas.jdragapanel</groupId>
-    <artifactId>jdraganddroppanel</artifactId>
+    <artifactId>jdragpanel</artifactId>
     <version>0.0.1-ALPHA</version>
     <packaging>jar</packaging>
 
