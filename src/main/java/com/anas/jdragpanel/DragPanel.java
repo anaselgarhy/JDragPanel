@@ -84,6 +84,7 @@ public class DragPanel extends JPanel implements DragInterface {
     @Override
     public void setDragManager(DragManager manager) {
         this.dragManager = manager;
+        this.dragManager.setDragContainer(this);
     }
 
     @Override
@@ -148,7 +149,12 @@ public class DragPanel extends JPanel implements DragInterface {
 
     @Override
     public JComponent[] getSelectedElements() {
-        return selectedElements.toArray(new JComponent[selectedElements.size()]);
+        return selectedElements.toArray(new JComponent[0]);
+    }
+
+    @Override
+    public JComponent[] getElements() {
+        return components.toArray(new JComponent[0]);
     }
 
     @Override

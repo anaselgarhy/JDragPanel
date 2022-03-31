@@ -28,6 +28,8 @@ public interface DragInterface {
     void setSelectedElements(JComponent[] element);
     JComponent[] getSelectedElements();
 
+    JComponent[] getElements();
+
     void addSelectedComponent(JComponent component);
     void removeSelectedComponent(JComponent component);
     void removeSelectedComponents();

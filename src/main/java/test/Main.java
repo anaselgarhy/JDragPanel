@@ -1,6 +1,7 @@
 package test;
 
 import com.anas.jdragpanel.DragPanel;
+import com.anas.jdragpanel.manager.mangers.CollisionDragManger;
 
 import javax.swing.*;
 import java.awt.*;
@@ -15,11 +16,13 @@ public class Main extends JFrame {
 
         DragPanel dragPanel = new DragPanel();
 
+        dragPanel.setDragManager(new CollisionDragManger());
+
 
         JButton button = new JButton("Button");
         JButton button2 = new JButton("Button2");
         button.setBounds(10, 10, 100, 100);
-        button2.setBounds(10, 50, 100, 100);
+        button2.setBounds(10, 150, 100, 100);
 
         dragPanel.add(button);
         dragPanel.add(button2);
